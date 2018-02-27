@@ -25,21 +25,22 @@
        </header>
        <div class="card-content">
          <div class="content">
-            <form method="POST" action="{{ route('posts.store') }}">
+            <form method="POST" action="{{ route('posts.store') }}" enctype="multipart/form-data">
+    	           {{ csrf_field() }}
                <div class="field">
                  <label class="label">Title</label>
                  <div class="control">
-                   <input class="input" type="text" placeholder="Text input">
+                   <input class="input" type="text" name="titre" placeholder="Text input">
                  </div>
               </div>
               <div class="field">
                  <label class="label">Body</label>
                  <div class="control">
-                   <textarea class="textarea" placeholder="Textarea"></textarea>
+                   <textarea class="textarea" name="body" placeholder="Textarea"></textarea>
                  </div>
                </div>
                <a type="submit" href="{{route('posts.index')}}" class="button is-pulled-left"> Go Back </a>
-               <a type="submit" class="button is-primary is-pulled-right"> Add </a><br>
+                <button type="submit" class="button is-primary is-pulled-right"> Add </button><br>
            </form>
           </div>
         </div>

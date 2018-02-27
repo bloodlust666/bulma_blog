@@ -19,8 +19,8 @@
   <div class="column"></div>
   <div class="column is-three-quarters" >
    <br>
-     <a class="button is-outlined is-pulled-right is-primary" href="{{route ('posts.create') }}">Add new blog</a>
-     <table class="table table is-fullwidth is-bordered is-striped is-narrow is-hoverable is-fullwidth ">
+     <a class="button is-outlined is-pulled-right is-primary" href="{{route ('posts.create') }}">Add new blog</a><br>
+     <table class="table table is-fullwidth is-bordered is-striped is-narrow is-hoverable is-fullwidth "><br>
        <thead>
          <th>id</th>
          <th>title</th>
@@ -29,17 +29,20 @@
          <th>delete</th>
        </thead>
        <tbody>
-         <th>id</th>
-         <td> post title sample</td>
-         <td>content</td>
-         <td>edit button</td>
-         <td>delet button</td>
+          @foreach($posts as $post)
+          <tr>
+         <th>{{$post->id}}</th>
+         <td>{{$post->titre}}</td>
+         <td>{{$post->body}}</td>
+         <td><a class="button is-outlined is-info " href="#">Edit</a></td>
+         <td><a class="button is-outlined is-danger" href="#">Delet</a></td>
+       </tr>
+         @endforeach
        </tbody>
      </table>
   </div>
   <div class="column"></div>
 
 </div>
-
 
  @endsection

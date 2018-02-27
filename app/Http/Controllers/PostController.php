@@ -16,7 +16,12 @@ class PostController extends Controller
      */
     public function index()
     {
-      return view('adminPanel.index');
+      $loggedInUserId = Auth::id();
+      $posts = Post::all()->where('user_id' , $loggedInUserId);
+      return view ('adminPanel.index', ['posts'=>$posts]);
+      //$listPosts = Post::orderBy('id','desc')->paginate(5);
+        //return view ('adminPanel.index')->withPosts($listPosts);
+      //return view('adminPanel.index',['posts'=> $listPosts]);
     }
 
     /**
@@ -37,12 +42,13 @@ class PostController extends Controller
      */
     public function store(Request $request)
     {
-        $post = new Post()
+      $this->validate(request (),[
+                'titre' => 'required|max:255',
+                'body' => 'required|max:255'
+            ]);
 
-        $postUserId =Auth::id();
-        
-        $post->user_id =  $postUserId ;
-        //$post->user_id = Auth::user()->id;
+        $post = new Post();
+        $post->user_id = Auth::user()->id;
         $post->titre = $request ->input('titre');
         $post->body = $request ->input('body');
         $post->save();

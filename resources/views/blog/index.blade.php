@@ -87,7 +87,16 @@
 <div class="column "></div>
 </div>
 
-
-
+<footer class="footer">
+  <div class="container">
+    <div class="content has-text-centered">
+      <p>
+        <strong>Blog v1</strong> by <a href="https://http://127.0.0.1:8000/blog">Lotfi jilal</a>. The source code is licensed
+        <a href="https://github.com/bloodlust666/bulma_blog">MIT</a>. The website content
+        is licensed <a href="https://github.com/bloodlust666">CC BY NC SA 4.0</a>.
+      </p>
+    </div>
+  </div>
+</footer>
 
 @endsection
