@@ -11,11 +11,11 @@
 |
 */
 
-Route::get('/', function () {
+/*Route::get('/', function () {
     return view('welcome');
-});
+});*/
 
-Route::get('/blog','BlogController@showBlog');
+Route::get('/','BlogController@showBlog');
 Route::resource('posts','PostController');
 
 Auth::routes();

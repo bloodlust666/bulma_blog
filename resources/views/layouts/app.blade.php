@@ -12,6 +12,7 @@
 
     <!-- Styles -->
     <!--<link href="{{ asset('css/app.css') }}" rel="stylesheet">-->
+    <link href="{{ asset('css/paginate.css') }}" rel="stylesheet">
      <script defer src="https://use.fontawesome.com/releases/v5.0.0/js/all.js"></script>
     <link href="{{ asset('css/bulma.css') }}" rel="stylesheet">
 </head>
@@ -19,7 +20,7 @@
     <div id="app">
         <nav class="navbar is-medium is-primary is-bold" >
             <div class="navbar-brand">
-                <a  class="navbar-item" href="{{ url('/blog') }}">Blog v1
+                <a  class="navbar-item" href="{{ url('/') }}">Blog v1
                   <!--  {{ config('app.name', 'Blog v1') }}-->
                     <!--<img src="" alt="" width="112" height="28">-->
                 </a>

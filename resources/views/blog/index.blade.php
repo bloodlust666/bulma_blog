@@ -34,22 +34,23 @@
   </ul>
 </aside>
 </div>
-<!-- Container  for 10 post -->
+<!--_______________________ Container  for 10 post ________________________ -->
   <div class="column is-two-thirds">
     <div class="column">
     <h2 class="subtitle">Top 10 Resent Blogs</h2>
+<div class="column" >
+@foreach($posts as $post)
       <div class="card">
           <header class="card-header">
             <p class="card-header-title">
-            <a href="#">1 Blog title</a>
+            <a href="#">{{$post->titre}}</a>
             </p>
           </header>
           <div class="card-content">
             <div class="content">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nec iaculis mauris.
-            <a href="#">@bulmaio</a>. <a href="#">#css</a> <a href="#">#responsive</a>
+              {{$post->body}}
               <br>
-              <time datetime="2016-1-1">11:09 PM - 1 Jan 2016</time>
+              <time datetime="2016-1-1">{{$post->updated_at}}</time>
             </div>
           </div>
           <footer class="card-footer">
@@ -58,13 +59,18 @@
             <a href="#" class="card-footer-item">Delete</a>
           </footer>
       </div>
+@endforeach<br>
+<div class="columns ">
+<div class="column  is-two-fifths"></div><div class="column ">{{ $posts->links() }}</div><div class="column "></div></div>
+</div>
 <!--______________________________________ ** **___________________________________________________-->
 <br>
-      <h2 class="subtitle">Top 10 Resent Blogs</h2>
+      <h2 class="subtitle">Top 10 liked Blogs</h2>
+<div class="column" >
         <div class="card">
             <header class="card-header">
               <p class="card-header-title">
-              <a href="#">1 Blog title</a>
+              <a href="#">2 Blog title</a>
               </p>
             </header>
             <div class="card-content">
@@ -81,6 +87,57 @@
               <a href="#" class="card-footer-item">Delete</a>
             </footer>
         </div>
+</div>
+<!--______________________________________ ** **___________________________________________________-->
+<br>
+      <h2 class="subtitle">Top 10 commented Blogs</h2>
+<div class="column" >
+        <div class="card">
+            <header class="card-header">
+              <p class="card-header-title">
+              <a href="#">2 Blog title</a>
+              </p>
+            </header>
+            <div class="card-content">
+              <div class="content">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nec iaculis mauris.
+              <a href="#">@bulmaio</a>. <a href="#">#css</a> <a href="#">#responsive</a>
+                <br>
+                <time datetime="2016-1-1">11:09 PM - 1 Jan 2016</time>
+              </div>
+            </div>
+            <footer class="card-footer">
+              <a href="#" class="card-footer-item">Save</a>
+              <a href="#" class="card-footer-item">Edit</a>
+              <a href="#" class="card-footer-item">Delete</a>
+            </footer>
+        </div>
+</div>
+<!--______________________________________ ** **___________________________________________________-->
+<br>
+      <h2 class="subtitle">Top 10 visited Blogs</h2>
+<div class="column" >
+        <div class="card">
+            <header class="card-header">
+              <p class="card-header-title">
+              <a href="#">2 Blog title</a>
+              </p>
+            </header>
+            <div class="card-content">
+              <div class="content">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nec iaculis mauris.
+              <a href="#">@bulmaio</a>. <a href="#">#css</a> <a href="#">#responsive</a>
+                <br>
+                <time datetime="2016-1-1">11:09 PM - 1 Jan 2016</time>
+              </div>
+            </div>
+            <footer class="card-footer">
+              <a href="#" class="card-footer-item">Save</a>
+              <a href="#" class="card-footer-item">Edit</a>
+              <a href="#" class="card-footer-item">Delete</a>
+            </footer>
+        </div>
+</div>
     </div>
   </div>
 
